@@ -1,0 +1,3 @@
+#!/bin/bash
+g++ testADXL345.cpp SPIDevice.cpp ADXL345.cpp -o testADXL345
+g++ SPITest.cpp SPIDevice.cpp -o SPITest

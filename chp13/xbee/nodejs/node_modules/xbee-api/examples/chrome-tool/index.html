@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html data-ng-app="xbeeApp" ng-csp="">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" media="all" href="css/bootstrap.css">
+    <link rel="stylesheet" media="all" href="css/main.css">
+  </head>
+  <body data-ng-controller="XBeeController" data-ng-init="init()">
+    <h4>Connection:</h4>
+
+    <select class="form-control" ng-disabled="connectionId > -1" data-ng-model="port" data-ng-options="p for p in ports">
+    </select>
+
+    <select class="form-control" ng-disabled="connectionId > -1" data-ng-model="bitrate" data-ng-options="b for b in bitrates">
+    </select>
+
+    <select class="form-control api" ng-disabled="connectionId > -1" ng-change="setApiMode()" data-ng-model="api_mode" data-ng-options="m for m in api_modes">
+    </select>
+
+    <button type="button" class="btn btn-primary" ng-disabled="port=='' || connectionId > -1" ng-click="open()">Open</button>
+    <button type="button" class="btn btn-info" ng-disabled="connectionId > -1" ng-click="refreshPorts()">Refresh</button>
+    <button type="button" class="btn btn-danger" ng-disabled="connectionId == -1" ng-click="close()">Close</button>
+
+    <br class="clear" />
+    <h4>AT Command:</h4>
+    <input type="text" ng-required="true" ng-pattern="/^[A-Z0-9]{2}$/" class="form-control" data-ng-change="buildATFrame()" data-ng-model="atCMD" placeholder="CMD">
+    <input type="text" class="form-control" data-ng-change="buildATFrame()" data-ng-model="atPARAMS" placeholder="PARAMS">
+
+    <br class="clear" />
+    <h4>API Frame:</h4>
+    <textarea ng-init="buildATFrame()" class="form-control">{{ atFRAME.toString('hex') }}</textarea>
+    <button type="button" ng-disabled="connectionId == -1" class="btn btn-success" ng-click="send()">Send</button>
+    
+    <br class="clear" />
+    <h4>Responses:</h4>
+    <ul>
+      <li data-ng-repeat="frame in frame_objects | reverse track by $index">
+        {{frame}}
+      </li>
+    </ul>
+  </body>
+</html>
+
+<script src="js/dist/angular.js"></script>
+<script src="js/dist/xbee.js"></script>
+<script src="js/dist/main.js"></script>

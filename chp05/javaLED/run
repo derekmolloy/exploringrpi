@@ -1,0 +1,14 @@
+#!/bin/bash
+echo "*** Setting up the LED"
+java exploringRPi.LEDExample setup
+echo "*** Turning the LED On"
+java exploringRPi.LEDExample on
+echo "*** Displaying the LED status"
+java exploringRPi.LEDExample status
+echo "*** On -- Sleeping for 2 seconds"
+sleep 2
+java exploringRPi.LEDExample off
+echo "*** Off -- Sleeping for 2 seconds"
+sleep 2
+echo "*** Close the GPIO entry (the LED may remain on)"
+java exploringRPi.LEDExample close

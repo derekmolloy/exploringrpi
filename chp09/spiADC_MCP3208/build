@@ -1,0 +1,2 @@
+#!/bin/bash
+g++ -O3 -o ADCmulti ADCmulti.cpp bus/SPIDevice.cpp bus/BusDevice.cpp

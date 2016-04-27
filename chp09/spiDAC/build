@@ -1,0 +1,2 @@
+#!/bin/bash
+g++ -O3 -o DACTest DACTest.cpp bus/SPIDevice.cpp bus/BusDevice.cpp

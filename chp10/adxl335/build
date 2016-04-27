@@ -1,0 +1,2 @@
+#!/bin/bash
+g++ -o adxl335 adxl335.cpp bus/SPIDevice.cpp bus/BusDevice.cpp

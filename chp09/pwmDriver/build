@@ -1,0 +1,3 @@
+#!/bin/bash
+g++ pwmTestApp.cpp I2CDevice.cpp pwmDriver.cpp -o pwmtest
+g++ servoTestApp.cpp I2CDevice.cpp pwmDriver.cpp Servo.cpp -o servotest

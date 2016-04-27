@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "These examples require the wiringPi library (see Chp.6) and"
+echo " the ArduiPi_OLED library installed (see Chp.10)"
+
+g++ oledTest.cpp -o oledTest -lArduiPi_OLED
+g++ oledDHT.cpp -o dht -lbcm2835 -lArduiPi_OLED
+
+echo "End of build script. Execute programs with sudo."
+

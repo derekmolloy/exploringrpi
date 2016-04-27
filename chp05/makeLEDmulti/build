@@ -1,0 +1,24 @@
+#!/bin/bash
+echo "Exploring Raspberry Pi - Building the makeLED application"
+g++ makeLEDmulti.cpp -o makeLEDmulti
+if ! [ -e "onLED" ]; then
+    ln -s makeLEDmulti onLED
+    echo "Created onLED symbolic link"
+fi
+if ! [ -e "offLED" ]; then
+    ln -s makeLEDmulti offLED
+    echo "Created offLED symbolic link"
+fi
+if ! [ -e "statusLED" ]; then
+    ln -s makeLEDmulti statusLED
+    echo "Created statusLED symbolic link"
+fi
+if ! [ -e "setupLED" ]; then
+    ln -s makeLEDmulti setupLED
+    echo "Created setupLED symbolic link"
+fi
+if ! [ -e "closeLED" ]; then
+    ln -s makeLEDmulti closeLED
+    echo "Created closeLED symbolic link"
+fi
+echo "Finished"

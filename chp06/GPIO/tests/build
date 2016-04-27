@@ -1,0 +1,4 @@
+#!/bin/bash
+g++ test_syspoll.cpp ../GPIO.cpp  -I.. -o test_syspoll -pthread
+g++ test_callback.cpp ../GPIO.cpp -I.. -o test_callback -pthread
+g++ test_gpiokeys.cpp ../GPIO.cpp -I.. -o test_gpiokeys -pthread

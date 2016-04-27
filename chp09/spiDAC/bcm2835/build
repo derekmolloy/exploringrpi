@@ -1,0 +1,2 @@
+#!/bin/sh
+g++ dac_bcm2835.cpp -o dac -lbcm2835

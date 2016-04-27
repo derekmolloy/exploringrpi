@@ -1,0 +1,2 @@
+#!/bin/bash
+g++ -O3 ERPiModule.cpp -shared -I/usr/include/python3.4/ -lpython3.4m -o ERPiModule.so

@@ -1,0 +1,3 @@
+#!/bin/bash
+g++ dacTestApp.cpp I2CDevice.cpp DACDriver.cpp -o dactest
+g++ dacSignalTest.cpp I2CDevice.cpp DACDriver.cpp -o signaltest

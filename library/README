@@ -1,0 +1,28 @@
+To build the code in this library, "cd build" and then type "cmake ..". Then 
+type "make" in the build directory and the shared library liberpiLibrary.so 
+should be built. To deploy the library to your Raspberry Pi type "sudo make 
+install" in the same directory. You should also place the library in the 
+/exploringrpi/library directory if you are building the various examples in 
+the chapters.
+
+The parent directory /exploringrpi/library currently contains a shared (.so) 
+and statically linked version (.a) of the library. See the examples on how 
+to use this library. For example see exploringrpi/chp09/LCDcharacter/build, 
+which contains:
+
+g++ LCDApp.cpp ../../library/liberpiLibrary.so -o LCDApp -I "../../library"
+
+You can also use the static library by typing:
+
+g++ LCDApp.cpp ../../library/liberpiLibrary.a -o LCDApp -I "../../library"
+
+The steps involved are explained in detail at www.exploringrpi.com/chapter9/
+
+BUILDING DOCUMENTATION (perform this step on a desktop computer - not the RPi)
+
+To build the documentation for this library, enter the docs directory and type:
+  exploringrpi/library/docs$ sudo apt-get install doxygen
+  exploringrpi/library/docs$ doxygen ExploringRPi.Doxyfile 
+The html documentation is built in the html directory and the LaTeX 
+documentation can be built latex directory if you have LaTeX installed (not 
+recommended on the RPi itself).

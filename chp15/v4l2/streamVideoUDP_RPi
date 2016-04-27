@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Video Streaming for the Raspberry Pi - derekmolloy.ie"
+echo "Piping the output of raspivid to avconv"
+
+raspivid -t 0 -w 1024 -h 768 -fps 30 -b 8000000 -o - | avconv -re -i - -vcodec copy -f h264 udp://192.168.1.4:12345

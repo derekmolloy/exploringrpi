@@ -1,0 +1,3 @@
+#!/bin/sh
+g++ perftest.cpp -o perftest -pthread -std=c++11
+g++ perftest_boost.cpp -o perftest_boost -pthread -std=c++11 -lboost_system -lboost_thread -lboost_chrono

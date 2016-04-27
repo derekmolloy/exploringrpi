@@ -1,0 +1,4 @@
+#!/bin/bash
+cython --embed test.pyx
+gcc test.c -I/usr/include/python3.4/ -lpython3.4m -o test -lutil -ldl -lpthread -lm
+

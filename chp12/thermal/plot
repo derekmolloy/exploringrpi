@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "Plotting the CPU Temperature to file"
+gnuplot <<_EOF_
+set term postscript enhanced color
+set output 'plot.ps'
+set title 'Exploring RPi CPU Temperature Plot'
+plot 'data_no_heatsink' with linespoints lc rgb 'blue', \
+     'data_with_heatsink' with linespoints lc rgb 'red'
+_EOF_
+echo "Converting the PS file to a PDF file"
+ps2pdf plot.ps plot.pdf

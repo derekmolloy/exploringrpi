@@ -1,0 +1,5 @@
+#!/bin/bash
+g++ -O2 `pkg-config --cflags --libs opencv` filter.cpp -o filter
+g++ -O2 `pkg-config --cflags --libs opencv` timing.cpp -o timing
+g++ -O2 `pkg-config --cflags --libs opencv` face.cpp -o face
+

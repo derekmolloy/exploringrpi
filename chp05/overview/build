@@ -1,0 +1,13 @@
+#!/bin/bash
+g++ cppstrings.cpp -o cppstrings
+gcc cstrings.c -o cstrings
+gcc helloworld.c -o helloworldc
+g++ helloworld.cpp -o helloworldcpp
+gcc operators.c -o operators
+g++ passing.cpp -o passing
+gcc pointerarray.c -o pointerarray
+gcc pointers.c -o pointers
+gcc short.c -o shortc
+g++ short.cpp -o shortcpp
+gcc sizeofvariables.c -o sizeofvariables
+gcc void.c -o void

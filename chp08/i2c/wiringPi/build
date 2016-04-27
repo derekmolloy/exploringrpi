@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "This build requires that WiringPi is installed on the RPi"
+echo "Please see Chapter 6 on how to install the latest version"
+gcc DS3231.c -o rtc -lwiringPi

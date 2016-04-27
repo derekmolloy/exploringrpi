@@ -1,0 +1,3 @@
+#!/bin/sh
+g++ -pthread pthreads.cpp -o threads
+g++ -pthread counters.cpp -o counters

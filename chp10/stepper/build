@@ -1,0 +1,3 @@
+#!/bin/bash
+g++ stepper.cpp motor/GPIO.cpp motor/StepperMotor.cpp -o stepper -pthread
+

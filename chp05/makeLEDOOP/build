@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Exploring Raspberry Pi - Building the makeLEDs application"
+g++ makeLEDs.cpp -o makeLEDs -std=c++11
+echo "Finished"

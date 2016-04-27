@@ -1,0 +1,3 @@
+#!/bin/bash
+g++ -o sharp sharp.cpp bus/SPIDevice.cpp bus/BusDevice.cpp
+g++ -o sharpfit sharpfit.cpp bus/SPIDevice.cpp bus/BusDevice.cpp

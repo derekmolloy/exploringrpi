@@ -1,0 +1,2 @@
+#!/bin/sh
+g++ adc_bcm2835.cpp -o adc -lbcm2835

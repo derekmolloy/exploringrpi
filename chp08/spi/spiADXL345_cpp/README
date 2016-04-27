@@ -1,0 +1,10 @@
+These programs use the library that is in the /library directory of the
+GitHub repository. To use this library you should perform the following
+steps:
+
+pi@ERPi ~ $ cd ~/exploringrpi/library/build
+pi@ERPi ~/exploringrpi/library/build $ cmake ..
+pi@ERPi ~/exploringrpi/library/build $ make
+pi@ERPi ~/exploringrpi/library/build $ sudo make install
+pi@ERPi ~/exploringrpi/library/build $ cd ~/exploringrpi/chp08/spi/spiADXL345_cpp
+pi@ERPi ~/exploringrpi/chp08/spi/spiADXL345_cpp $ ./build

@@ -1,0 +1,12 @@
+#!/bin/sh
+echo "This build requires that WiringPi is installed on the RPi"
+echo "Please see Chapter 6 on how to install the latest version"
+g++ buttonLED.cpp -o buttonLED -lwiringPi
+g++ buttonLEDdebounce.cpp -o buttonLEDdb -lwiringPi
+g++ clock.cpp -o clock -lwiringPi
+g++ fadeLED.cpp -o fadeLED -lwiringPi
+echo "Half way there..."
+g++ fasttoggle.cpp -o fasttoggle -lwiringPi
+g++ info.cpp -o info -lwiringPi
+g++ pwm.cpp -o pwm -lwiringPi
+g++ servo.cpp -o servo -lwiringPi
