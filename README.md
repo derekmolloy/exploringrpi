@@ -28,7 +28,7 @@ code or other files.
 You should have received a copy of the GNU General Public License along with 
 this repository in the License.txt file.
 
-@book{XXXX,
+@book{978-1-119-1868-1,
    Author = {Derek Molloy},
    Title = {Exploring Raspberry Pi: Interfacing to the Real World with Embedded Linux},
    Publisher = {Wiley},
