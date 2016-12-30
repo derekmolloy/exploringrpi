@@ -13,7 +13,7 @@ float getTemperature(int adc_value){     // from the TMP36 datasheet
 int main(){
    cout << "Starting the RPi TMP36 example" << endl;
    SPIDevice *busDevice = new SPIDevice(0,0);
-   busDevice->setSpeed(5000000);
+   busDevice->setSpeed(1000000);         // max frequency limit at 3.3V
    busDevice->setMode(SPIDevice::MODE0);
    unsigned char send[3], receive[3];
    send[0] = 0b00000110;     // Reading single-ended input from channel 0
